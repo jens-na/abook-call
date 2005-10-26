@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: abook 0.5.5pre1\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-17 13:34+0300\n"
+"POT-Creation-Date: 2005-10-25 11:03+0300\n"
 "PO-Revision-Date: 2005-10-03 00:56+0200\n"
 "Last-Translator: Johannes Weißl <jargon@molb.org>\n"
 "Language-Team: German <de@li.org>\n"
@@ -363,7 +363,7 @@ msgstr "BENUTZER"
 msgid "Tab name too wide for screen"
 msgstr "Kartei-Name zu breit für den Bildschirm"
 
-#: edit.c:219
+#: edit.c:224
 msgid "E-mail addresses:"
 msgstr "E-Mail-Adressen:"
 

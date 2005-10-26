@@ -3,6 +3,10 @@ abook AUTHORS
 
 Jaakko Heinonen		<jheinonen@users.sourceforge.net>
 
+Cedric Duval		<cedricduval@free.fr>
+ - i18n
+ - etc.
+
 Alan Ford		<alan@whirlnet.co.uk>
  - Debian package
  - manual pages
@@ -20,7 +24,3 @@ Koenraad Heijlen	<vipie@ulyssis.org>
  - csv import filter
  - palmcsv export filter
  - fixes
-
-Cedric Duval		<cedricduval@free.fr>
- - i18n
-

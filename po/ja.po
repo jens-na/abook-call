@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.5\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-17 13:34+0300\n"
+"POT-Creation-Date: 2005-10-25 11:03+0300\n"
 "PO-Revision-Date: 2005-10-18 18:10+0200\n"
 "Last-Translator: TAKAHASHI Tamotsu <ttakah@lapis.plala.or.jp>\n"
 "Language-Team: japanese\n"
@@ -60,7 +60,9 @@ msgstr "%s は正しい HOME ディレクトリではありません\n"
 msgid ""
 "Cannot combine options --mutt-query, --convert, --add-email or --add-email-"
 "quiet\n"
-msgstr "次のオプションを同時に複数使用することはできません: --mutt-query, --convert, --add-email, --add-email-quiet\n"
+msgstr ""
+"次のオプションを同時に複数使用することはできません: --mutt-query, --convert, "
+"--add-email, --add-email-quiet\n"
 
 #: abook.c:280
 #, c-format
@@ -78,17 +80,17 @@ msgstr "     -h\t--help\t\t\t\t使用方法"
 
 #: abook.c:402
 msgid "     -C\t--config\t<file>\t\tuse an alternative configuration file"
-msgstr "     -C\t--config\t<ファイル>\t\t通常の場所以外にある設定ファイルを使う"
-
+msgstr ""
+"     -C\t--config\t<ファイル>\t\t通常の場所以外にある設定ファイルを使う"
 
 #: abook.c:403
 msgid "\t--datafile\t<file>\t\tuse an alternative addressbook file"
-msgstr "\t--datafile\t<ファイル>\t\t通常の場所以外にあるアドレス帳ファイルを使う"
+msgstr ""
+"\t--datafile\t<ファイル>\t\t通常の場所以外にあるアドレス帳ファイルを使う"
 
 #: abook.c:404
 msgid "\t--mutt-query\t<string>\tmake a query for mutt"
 msgstr "\t--mutt-query\t<文字列>\t問い合わせに対して mutt 用に整形出力する"
-
 
 #: abook.c:405
 msgid ""
@@ -170,7 +172,8 @@ msgstr "--help をご覧ください\n"
 msgid ""
 "input and output formats are the same\n"
 "exiting...\n"
-msgstr "入力と出力の形式が同じです\n"
+msgstr ""
+"入力と出力の形式が同じです\n"
 "終了します\n"
 
 #: abook.c:639
@@ -217,7 +220,8 @@ msgstr "アドレス %s は既にアドレス帳に入っています\n"
 msgid ""
 "cannot open /dev/tty\n"
 "you may want to use --add-email-quiet\n"
-msgstr "/dev/tty が開けません\n"
+msgstr ""
+"/dev/tty が開けません\n"
 "--add-email-quiet をご利用になった方が良いかもしれません\n"
 
 #: abook.c:740
@@ -350,7 +354,7 @@ msgstr " 拡張 "
 msgid "Tab name too wide for screen"
 msgstr "タブ名が画面からはみ出ます"
 
-#: edit.c:219
+#: edit.c:224
 msgid "E-mail addresses:"
 msgstr "メールアドレス: "
 
@@ -701,4 +705,5 @@ msgstr "現在のデータベースを保存しますか"
 
 #: ui.c:679
 msgid "Sorry, the specified file appears not to be a valid abook addressbook"
-msgstr "申し訳ありませんが、ご指定のファイルは正規の abook アドレス帳ではないようです"
+msgstr ""
+"申し訳ありませんが、ご指定のファイルは正規の abook アドレス帳ではないようです"
