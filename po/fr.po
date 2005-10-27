@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: abook\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-25 11:03+0300\n"
+"POT-Creation-Date: 2005-10-27 17:07+0300\n"
 "PO-Revision-Date: 2005-10-03 10:53+0200\n"
 "Last-Translator: Cedric Duval <cedricduval+abook@free.fr>\n"
 "Language-Team: french\n"
@@ -330,7 +330,7 @@ msgstr "Personnalisé4"
 msgid "Custom5"
 msgstr "Personnalisé5"
 
-#: database.c:406
+#: database.c:424
 msgid "Invalid field value defined in configuration"
 msgstr "Valeur de champ invalide définie dans la configuration"
 

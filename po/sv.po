@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: abook 0.5.4\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-25 11:03+0300\n"
+"POT-Creation-Date: 2005-10-27 17:07+0300\n"
 "PO-Revision-Date: 2005-09-23 22:13+0200\n"
 "Last-Translator: Susanna Björverud <susanna.bjorverud@telia.com>\n"
 "Language-Team: none\n"
@@ -330,7 +330,7 @@ msgstr "Egen4"
 msgid "Custom5"
 msgstr "Egen5"
 
-#: database.c:406
+#: database.c:424
 msgid "Invalid field value defined in configuration"
 msgstr "Ogiltigt fältvärde i konfigurationen"
 

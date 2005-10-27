@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.5\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-25 11:03+0300\n"
+"POT-Creation-Date: 2005-10-27 17:07+0300\n"
 "PO-Revision-Date: 2005-10-18 18:10+0200\n"
 "Last-Translator: TAKAHASHI Tamotsu <ttakah@lapis.plala.or.jp>\n"
 "Language-Team: japanese\n"
@@ -326,7 +326,7 @@ msgstr "拡張情報4"
 msgid "Custom5"
 msgstr "拡張情報5"
 
-#: database.c:406
+#: database.c:424
 msgid "Invalid field value defined in configuration"
 msgstr "不正な項目名が設定されています"
 

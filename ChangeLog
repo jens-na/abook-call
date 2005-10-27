@@ -2,6 +2,7 @@
  - i18n support (Cedric Duval)
  - French translation (Cedric Duval)
  - Swedish translation (Susanna Björverud)
+ - Japanese translation (Takahashi Tamotsu)
  - palmcsv import filter (Marc Tardif)
  - use better common code for csv filters (Marc Tardif)
  - translation HOWTO (Cedric Duval)

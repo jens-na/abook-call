@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: abook 0.5.5pre1\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-25 11:03+0300\n"
+"POT-Creation-Date: 2005-10-27 17:07+0300\n"
 "PO-Revision-Date: 2005-10-03 00:56+0200\n"
 "Last-Translator: Johannes Weißl <jargon@molb.org>\n"
 "Language-Team: German <de@li.org>\n"
@@ -335,7 +335,7 @@ msgstr "Benutzer4"
 msgid "Custom5"
 msgstr "Benutzer5"
 
-#: database.c:406
+#: database.c:424
 msgid "Invalid field value defined in configuration"
 msgstr "Ungültiger Feld-Wert in der Konfiguration festgelegt"
 
