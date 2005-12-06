@@ -563,7 +563,7 @@ msgstr "\ts\t\tclasser la base de données\n"
 
 #: help.h:37
 msgid "\tS\t\t\"surname sort\"\n"
-msgstr "\ts\t\tclassement par nom de famille\n"
+msgstr "\tS\t\tclassement par nom de famille\n"
 
 #: help.h:38
 msgid "\tF\t\tsort by field (defined in configuration file)\n"
