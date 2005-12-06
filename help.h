@@ -44,7 +44,7 @@ N_("	A		move current item up\n"),
 N_("	Z		move current item down\n"),
 "\n",
 N_("	m		send mail with mutt\n"),
-N_("	u		view URL with web browser\n"),
+N_("	v		view URL with web browser\n"),
 NULL
 
 };
@@ -52,17 +52,14 @@ NULL
 static char *editorhelp[] = {
 
 "\n",
-N_("	arrows/h,l		change tab\n"),
+N_("	a,c,p,o,C/arrows/h,l	change tab\n"),
 "\n",
-N_("	q			quit to main screen\n"),
-"\n",
-N_("	1 - 5 A - Z		edit fields\n"),
+N_("	1 - 5			edit fields\n"),
 "\n",
 N_("	k or <			previous item\n"),
 N_("	j or >			next item\n"),
 "\n",
-N_("	r			roll e-mail addresses up\n"),
-N_("	ESC-r			roll e-mail addresses down\n"),
+N_("	r			roll e-mail addresses\n"),
 "\n",
 N_("	u			undo\n"),
 "\n",

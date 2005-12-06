@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.5\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-27 17:07+0300\n"
+"POT-Creation-Date: 2005-12-06 07:50+0200\n"
 "PO-Revision-Date: 2005-10-18 18:10+0200\n"
 "Last-Translator: TAKAHASHI Tamotsu <ttakah@lapis.plala.or.jp>\n"
 "Language-Team: japanese\n"
@@ -583,8 +583,8 @@ msgid "\tm\t\tsend mail with mutt\n"
 msgstr "\tm\t\tMutt でメールを送る\n"
 
 #: help.h:47
-msgid "\tu\t\tview URL with web browser\n"
-msgstr "\tu\t\tURL をブラウザで閲覧する\n"
+msgid "\tv\t\tview URL with web browser\n"
+msgstr "\tv\t\tURL をブラウザで閲覧する\n"
 
 #: help.h:55
 msgid "\ta,c,p,o,C/arrows/h,l\tchange tab\n"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: abook 0.5.5pre1\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-27 17:07+0300\n"
+"POT-Creation-Date: 2005-12-06 07:50+0200\n"
 "PO-Revision-Date: 2005-10-03 00:56+0200\n"
 "Last-Translator: Johannes Weißl <jargon@molb.org>\n"
 "Language-Team: German <de@li.org>\n"
@@ -599,8 +599,8 @@ msgid "\tm\t\tsend mail with mutt\n"
 msgstr "\tm\t\tE-Mail mit Mutt senden\n"
 
 #: help.h:47
-msgid "\tu\t\tview URL with web browser\n"
-msgstr "\tu\t\tURL mit Web-Browser anzeigen\n"
+msgid "\tv\t\tview URL with web browser\n"
+msgstr "\tv\t\tURL mit Web-Browser anzeigen\n"
 
 #: help.h:55
 msgid "\ta,c,p,o,C/arrows/h,l\tchange tab\n"

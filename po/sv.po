@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: abook 0.5.4\n"
 "Report-Msgid-Bugs-To: <cedricduval+abook@free.fr>\n"
-"POT-Creation-Date: 2005-10-27 17:07+0300\n"
+"POT-Creation-Date: 2005-12-06 07:50+0200\n"
 "PO-Revision-Date: 2005-09-23 22:13+0200\n"
 "Last-Translator: Susanna Björverud <susanna.bjorverud@telia.com>\n"
 "Language-Team: none\n"
@@ -588,8 +588,8 @@ msgid "\tm\t\tsend mail with mutt\n"
 msgstr "\tm\t\tskicka post med mutt\n"
 
 #: help.h:47
-msgid "\tu\t\tview URL with web browser\n"
-msgstr "\tu\t\tvisa URL i webbläsare\n"
+msgid "\tv\t\tview URL with web browser\n"
+msgstr "\tv\t\tvisa URL i webbläsare\n"
 
 #: help.h:55
 msgid "\ta,c,p,o,C/arrows/h,l\tchange tab\n"
