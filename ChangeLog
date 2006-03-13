@@ -1,3 +1,7 @@
+0.5.6
+ - translation fixes
+ - fixed gcrd export format (\r\n line endings according to RFC, Marc Tardif)
+
 0.5.5
  - i18n support (Cedric Duval)
  - French translation (Cedric Duval)

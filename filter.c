@@ -1510,7 +1510,7 @@ gcrd_export_database(FILE *out, struct db_enumerator e)
 	char *name;
 
 	db_enumerate_items(e) {
-		fprintf(out, "BEGIN:VCARD\nFN:%s\n",
+		fprintf(out, "BEGIN:VCARD\r\nFN:%s\r\n",
 				safe_str(database[e.item][NAME]));
 
 		name = get_surname(database[e.item][NAME]);
@@ -1518,7 +1518,7 @@ gcrd_export_database(FILE *out, struct db_enumerator e)
 	                if(database[e.item][NAME][j] == ' ')
 	                        break;
 	        }
-		fprintf(out, "N:%s;%.*s\n",
+		fprintf(out, "N:%s;%.*s\r\n",
 			safe_str(name),
 			j,
 			safe_str(database[e.item][NAME])
@@ -1527,7 +1527,7 @@ gcrd_export_database(FILE *out, struct db_enumerator e)
 		free(name);
 
 		if ( database[e.item][ADDRESS] )
-			fprintf(out, "ADR:;;%s;%s;%s;%s;%s;%s\n",
+			fprintf(out, "ADR:;;%s;%s;%s;%s;%s;%s\r\n",
 				safe_str(database[e.item][ADDRESS]),
 				safe_str(database[e.item][ADDRESS2]),
 				safe_str(database[e.item][CITY]),
@@ -1537,29 +1537,32 @@ gcrd_export_database(FILE *out, struct db_enumerator e)
 				);
 
 		if (database[e.item][PHONE])
-			fprintf(out, "TEL;HOME:%s\n", database[e.item][PHONE]);
+			fprintf(out, "TEL;HOME:%s\r\n",
+				database[e.item][PHONE]);
 		if (database[e.item][WORKPHONE])
-			fprintf(out, "TEL;WORK:%s\n", database[e.item][WORKPHONE]);
+			fprintf(out, "TEL;WORK:%s\r\n",
+				database[e.item][WORKPHONE]);
+
 		if (database[e.item][FAX])
-			fprintf(out, "TEL;FAX:%s\n", database[e.item][FAX]);
+			fprintf(out, "TEL;FAX:%s\r\n", database[e.item][FAX]);
 		if (database[e.item][MOBILEPHONE])
-			fprintf(out, "TEL;CELL:%s\n", database[e.item][MOBILEPHONE]);
+			fprintf(out, "TEL;CELL:%s\r\n", database[e.item][MOBILEPHONE]);
 
 		if ( database[e.item][EMAIL] ) {
 			split_emailstr(e.item, emails);
 			for(j=0; j < MAX_EMAILS ; j++) {
 				if ( *emails[j] )
-					fprintf(out, "EMAIL;INTERNET:%s\n",
+					fprintf(out, "EMAIL;INTERNET:%s\r\n",
 						emails[j]);
 			}
 		}
 
 		if ( database[e.item][NOTES] )
-			fprintf(out, "NOTE:%s\n", database[e.item][NOTES]);
+			fprintf(out, "NOTE:%s\r\n", database[e.item][NOTES]);
 		if (database[e.item][URL])
-			fprintf(out, "URL:%s\n",  database[e.item][URL]);
+			fprintf(out, "URL:%s\r\n",  database[e.item][URL]);
 
-		fprintf(out, "END:VCARD\n\n");
+		fprintf(out, "END:VCARD\r\n\r\n");
 
 	}
 
