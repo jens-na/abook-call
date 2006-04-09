@@ -38,6 +38,7 @@
  * external variables
  */
 
+extern int items, curitem;
 extern char *datafile;
 
 extern bool alternative_datafile;
@@ -280,7 +281,7 @@ statusline_askchoice(const char *msg, const char *choices, short dflt)
 	char *s;
 	int ch;
 
-	assert((dflt >= 0) && (dflt <= strlen(choices)));
+	assert((dflt < 0) || (dflt > strlen(choices)));
 
 	if(dflt) {
 		s = strdup_printf("%s [%c]", msg, choices[dflt - 1]);
@@ -305,7 +306,7 @@ statusline_askchoice(const char *msg, const char *choices, short dflt)
 }
 
 char *
-ui_readline(char *prompt, char *s, size_t limit, bool use_completion)
+ui_readline(const char *prompt, char *s, size_t limit, bool use_completion)
 {
 	int y, x;
 	char *ret;
@@ -326,7 +327,7 @@ ui_readline(char *prompt, char *s, size_t limit, bool use_completion)
 }
 
 int
-statusline_ask_boolean(char *msg, int def)
+statusline_ask_boolean(const char *msg, int def)
 {
 	int ret;
 	char *msg2 = strconcat(msg,  def ? _(" (Y/n)?") : _(" (y/N)?"), NULL);
@@ -362,7 +363,7 @@ refresh_statusline()
 }
 
 char *
-ask_filename(char *prompt)
+ask_filename(const char *prompt)
 {
 	char *buf = NULL;
 
@@ -432,6 +433,7 @@ display_help(int help)
  */
 
 extern char *selected;
+extern int curitem;
 
 void
 get_commands()
@@ -452,7 +454,7 @@ get_commands()
 			case 'q': return;
 			case 'Q': quit_abook(QUIT_DONTSAVE);	break;
 			case 'P': print_stderr(selected_items() ?
-						  -1 : list_get_curitem());
+						  -1 : list_current_item());
 				  return;
 			case '?':
 				  display_help(HELP_MAIN);
@@ -489,15 +491,15 @@ get_commands()
 
 			case 'o': ui_open_datafile();	break;
 
-			case 's': sort_by_field("name");break;
+			case 's': sort_by_field(NAME);	break;
 			case 'S': sort_surname();	break;
-			case 'F': sort_by_field(NULL);	break;
+			case 'F': sort_by_field(-1);	break;
 
 			case '/': ui_find(0);		break;
 			case '\\': ui_find(1);		break;
 
-			case ' ': if(list_get_curitem() >= 0) {
-				   list_invert_curitem_selection();
+			case ' ': if(curitem >= 0) {
+				   selected[curitem] = !selected[curitem];
 				   ui_print_number_of_items();
 				   refresh_list();
 				  }
@@ -517,13 +519,13 @@ get_commands()
 				break;
 
 			case 'm': launch_mutt(selected_items() ?
-						  -1 : list_get_curitem());
+						  -1 : list_current_item());
 				  refresh_screen();
 				  break;
 
 			case 'p': ui_print_database(); break;
 
-			case 'v': launch_wwwbrowser(list_get_curitem());
+			case 'v': launch_wwwbrowser(list_current_item());
 				  refresh_screen();
 				  break;
 		}
@@ -572,22 +574,21 @@ ui_find(int next)
 		refresh_screen();
 	}
 
-	if( (item = find_item(findstr, list_get_curitem() + !!next,
-			search_fields)) < 0 &&
+	if( (item = find_item(findstr, curitem + !!next, search_fields)) < 0 &&
 			(item = find_item(findstr, 0, search_fields)) >= 0)
 		statusline_addstr(_("Search hit bottom, continuing at top"));
 
 	if(item >= 0) {
-		list_set_curitem(item);
+		curitem = item;
 		refresh_list();
 	}
 }
 
+
 void
 ui_print_number_of_items()
 {
-	char *str = strdup_printf("     " "|%3d/%3d",
-		selected_items(), db_n_items());
+	char *str = strdup_printf("     " "|%3d/%3d", selected_items(), items);
 
 	mvaddstr(0, COLS-strlen(str), str);
 
@@ -599,7 +600,7 @@ ui_read_database()
 {
 	char *msg;
 
-	if(!list_is_empty()) {
+	if(items > 0) {
 		msg = strdup_printf(_("Your current data will be lost - "
 				"Press '%c' to continue"),
 				*(S_("keybinding for yes|y")));
@@ -674,7 +675,7 @@ ui_open_datafile()
 
 	load_database(filename);
 
-	if(list_is_empty()) {
+	if(items == 0) {
 		statusline_msg(_("Sorry, the specified file appears not to be a valid abook addressbook"));
 		load_database(datafile);
 	} else {
