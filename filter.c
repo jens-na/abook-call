@@ -908,7 +908,7 @@ pine_fixbuf(char *buf)
 {
 	int i,j;
 
-	for(i=0,j=0; j < (int)strlen(buf); i++, j++)
+	for(i = 0,j = 0; j < (int)strlen(buf); i++, j++)
 		buf[i] = buf[j] == '\n' ? buf[++j] : buf[j];
 }
 
@@ -921,18 +921,17 @@ pine_convert_emails(char *s)
 	if(s == NULL || *s != '(')
 		return;
 
-	for(i=0; s[i]; i++ )
-		s[i] = s[i+1];
+	for(i = 0; s[i]; i++)
+		s[i] = s[i + 1];
 
 	if( ( tmp = strchr(s,')')) )
-		*tmp=0;
+		*tmp = '\0';
 
 	for(i = 1; ( tmp = strchr(s, ',') ) != NULL ; i++, s = tmp + 1)
 		if(i > MAX_EMAILS - 1) {
-			*tmp = 0;
+			*tmp = '\0';
 			break;
 		}
-
 }
 
 static void
@@ -943,11 +942,11 @@ pine_parse_buf(char *buf)
 	char *end;
 	char tmp[PINE_BUF_SIZE];
 	int i, len, last;
-	int pine_conv_table[]= {NICK, NAME, EMAIL, -1, NOTES};
+	int pine_conv_table[] = {NICK, NAME, EMAIL, -1, NOTES};
 
 	memset(&item, 0, sizeof(item));
 
-	for(i=0, last=0; !last ; i++) {
+	for(i = 0, last=0; !last ; i++) {
 		if( !(end = strchr(start, '\t')) )
 			last=1;
 
