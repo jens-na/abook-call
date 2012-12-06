@@ -45,6 +45,10 @@ N_("	Z		move current item down\n"),
 "\n",
 N_("	m		send mail with mutt\n"),
 N_("	v		view URL with web browser\n"),
+"\n",
+N_("	H		call contact (home phone)\n"),
+N_("	W		call contact (work phone)\n"),
+N_("	M		call contact (mobile phone)\n"),
 NULL
 
 };
@@ -68,6 +72,10 @@ N_("	u			undo\n"),
 "\n",
 N_("	m			send mail with mutt\n"),
 N_("	v			view url with web browser\n"),
+"\n",
+N_("	H			call contact (home phone)\n"),
+N_("	W			call contact (work phone)\n"),
+N_("	M			call contact (mobile phone)\n"),
 "\n",
 NULL
 

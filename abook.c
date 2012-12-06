@@ -604,6 +604,49 @@ launch_wwwbrowser(int item)
 	ui_init_curses();
 }
 
+void
+launch_callpgm(int item, char type)
+{
+  char *cmd = NULL;
+  
+  if( !is_valid_item(item) )
+	return;
+
+  if(type == 'H')
+  {
+    if(db_fget(item, PHONE))
+	  cmd = strdup_printf("%s '%s'",
+		opt_get_str(STR_CALL_COMMAND),
+		safe_str(db_fget(item, PHONE)));
+  }
+  else if(type == 'W')
+  {
+    if(db_fget(item, WORKPHONE))
+	  cmd = strdup_printf("%s '%s'",
+		opt_get_str(STR_CALL_COMMAND),
+		safe_str(db_fget(item, WORKPHONE)));
+  }
+  else if(type == 'M')
+  {  
+    if(db_fget(item, MOBILEPHONE))
+	  cmd = strdup_printf("%s '%s'",
+		opt_get_str(STR_CALL_COMMAND),
+		safe_str(db_fget(item, MOBILEPHONE)));
+  }
+  else
+	return;
+
+  if(cmd)
+	system(cmd);
+
+  free(cmd);
+
+  /*
+   * we need to make sure that curses settings are correct
+   */
+  ui_init_curses();
+}
+
 FILE *
 abook_fopen (const char *path, const char *mode)
 {

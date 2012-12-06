@@ -526,6 +526,15 @@ get_commands()
 			case 'v': launch_wwwbrowser(list_get_curitem());
 				  refresh_screen();
 				  break;
+			case 'H': launch_callpgm(list_get_curitem(), 'H');
+				  refresh_screen();
+			      break;
+			case 'W': launch_callpgm(list_get_curitem(), 'W');
+				  refresh_screen();
+			      break;
+			case 'M': launch_callpgm(list_get_curitem(), 'M');
+				  refresh_screen();
+				  break;
 		}
 	}
 }

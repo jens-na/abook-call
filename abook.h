@@ -8,6 +8,7 @@ void		quit_abook(int save_db);
 void		launch_wwwbrowser(int item);
 void		launch_mutt(int item);
 void		print_stderr(int item);
+void        launch_callpgm(int item, char type);
 #ifdef _AIX
 int		strcasecmp (const char *, const char *);
 int		strncasecmp (const char *, const char *, size_t);

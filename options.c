@@ -58,6 +58,7 @@ static struct option abook_vars[] = {
 	{ "print_command", OT_STR, STR_PRINT_COMMAND, UL "lpr" },
 
 	{ "www_command", OT_STR, STR_WWW_COMMAND, UL "lynx" },
+	{ "call_command", OT_STR, STR_CALL_COMMAND, UL "twinkle" },
 
 	{ "address_style", OT_STR, STR_ADDRESS_STYLE, UL "eu" },
 
